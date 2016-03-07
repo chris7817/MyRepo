@@ -10,7 +10,7 @@ import models.Node;
 
 /**
  *
- * @author chris
+ * @author Christopher Myung <Chris.Myung@gmail.com>
  */
 public class App {
     

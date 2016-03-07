@@ -7,22 +7,38 @@ package models;
 
 /**
  *
- * @author chris
+ * @author Christopher Myung <Chris.Myung@gmail.com>
  */
 public class Assassin {
+    
+    static int objCounter = 0;
     
     private String firstName;
     private String lastName;
     private Character gender;
     private String cluster;
     private Integer age;
+    private int id = 0;
     
     public Assassin(String firstName, String lastName, Character gender, String cluster, Integer age) {
+        
+        objCounter++;
+        
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
         this.cluster = cluster;
         this.age = age;
+        this.id = objCounter;
+        
+    }
+    
+    public Assassin(){
+        
+    }
+    
+    public Assassin(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getFirstName() {
@@ -33,6 +49,9 @@ public class Assassin {
         return lastName;
     }
     
+    public int getId(){
+        return id;
+    }
     
 }
 

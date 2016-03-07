@@ -7,7 +7,7 @@ package models;
 
 /**
  *
- * @author chris
+ * @author Christopher Myung <Chris.Myung@gmail.com>
  */
 public class Node {
     
@@ -15,10 +15,19 @@ public class Node {
     private Node target;
     
     public Node(Assassin player) {
-        this.player = player;
-        
-        
+        this(player, null);
     }
+    
+    public Node(Assassin player, Node target){
+        this.player = player;
+        this.target = target;
+    }
+    
+    public Assassin getPlayer(){
+        return player;
+    }
+    
+    
     
     public Assassin getNode() {
         return this.player;
@@ -32,27 +41,7 @@ public class Node {
         this.target = node;
         
     }
-    
-//    public String toString() {
-//        String name = player.getLastName();
-//        return name;
-//    }
-//
-//    public Assassins getPlayer() {
-//        return player;
-//    }
-//
-//    public void setPlayer(Assassins player) {
-//        this.player = player;
-//    }
-//
-//    public Node getTarget() {
-//        return target;
-//    }
-//
-//    public void setTarget(Node target) {
-//        this.target = target;
-//    }
+
     
     
     
